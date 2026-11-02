@@ -1,0 +1,33 @@
+<section id="conclusion" data-transition="fade" style="background:#14213D;color:#C9D6EA;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#86B6EF">Conclusions</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.15;color:#FBFBF8">What we conclude</h2>
+</div>
+<div style="display:flex;gap:40px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:4px solid #86B6EF;padding:24px 0px 0px 0px">
+<h3 style="font-size:32px;font-weight:600;line-height:1.2;color:#FBFBF8">Count models fit; NB2 matters by day</h3>
+<p style="font-size:24px;line-height:1.4">Hourly arrivals are Poisson; daily totals need NB2 (α̂ = 0.0168).</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:4px solid #86B6EF;padding:24px 0px 0px 0px">
+<h3 style="font-size:32px;font-weight:600;line-height:1.2;color:#FBFBF8">Interpretable beats black box</h3>
+<p style="font-size:24px;line-height:1.4">GLM D² = 0.475 on 2019; gradient boosting misses demand by 27.8%.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:4px solid #F4B49C;padding:24px 0px 0px 0px">
+<h3 style="font-size:32px;font-weight:600;line-height:1.2;color:#FBFBF8">Act downtown first</h3>
+<p style="font-size:24px;line-height:1.4">4 overflow ports: 1,708 → 202 lost sessions/yr; availability info alone reaches 94.</p>
+</div>
+</div>
+<div style="display:flex;gap:40px">
+<div style="flex:1;display:flex;flex-direction:column;gap:10px">
+<h3 style="font-size:28px;font-weight:600;line-height:1.2;color:#FBFBF8">Limitations</h3>
+<p style="font-size:24px;line-height:1.4">One city, 8 sites · demand censored by capacity (lower bounds) · 2019 rebound under-predicted by 9.4% · no weather or points-of-interest data</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px">
+<h3 style="font-size:28px;font-weight:600;line-height:1.2;color:#FBFBF8">Future work</h3>
+<p style="font-size:24px;line-height:1.4">Censoring-aware likelihood · weather and POI covariates · grid constraints in placement · replicate on other cities' open logs</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#9FB0CC">Thank you — questions welcome</p>
+<p style="position:absolute;left:1592px;bottom:64px;width:200px;font-size:24px;color:#9FB0CC;text-align:right">10</p>
+<aside>Close by tying back to the four gaps: interpretable models that are not less accurate (gap 1), forecasts that drive placement and a quantified what-if (gap 2), proper count likelihoods, with the twist that overdispersion depends on the time scale (gap 3), and DBSCAN on the gap surface (gap 4). Reproducibility: python run_all.py rebuilds every table, figure and number in about 4 minutes with fixed seeds; the paper is generated from results.json, so text and results cannot drift apart.</aside>
+</section>

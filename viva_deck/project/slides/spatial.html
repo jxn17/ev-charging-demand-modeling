@@ -1,0 +1,27 @@
+<section id="spatial" data-transition="fade" style="background:#FBFBF8;color:#3B4660;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1C5CAB">Placement · Paper Figs. 6–7, Table VIII</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.15;color:#14213D">DBSCAN finds one under-supplied zone: downtown</h2>
+</div>
+<div style="display:flex;gap:40px;align-items:start">
+<div style="background:#FFFFFF;border:1px solid #DDE3EC;border-radius:16px;padding:12px">
+<img src="/_blob/ca8bc97b03471a5ab2bb4fbea6fea0be" alt="Left: k-distance plot with knee at 40 m and eps 57 m. Right: DBSCAN cluster of high-gap grid cells over downtown Palo Alto with the candidate star between the Hamilton, Webster and Bryant garages" style="width:1040px;height:492px;object-fit:contain">
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#14213D;border-radius:16px;padding:28px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#86B6EF">Candidate site</p>
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:40px;font-weight:600;line-height:1.15;color:#FBFBF8">37.4461, −122.1586</p>
+<p style="font-size:24px;line-height:1.4;color:#C9D6EA">239 m from Hamilton, between the Hamilton, Webster and Bryant garages</p>
+</div>
+<ul style="font-size:24px;line-height:1.4;color:#3B4660">
+<li>Gap mass 1,903 sessions/yr over 1.60 km²</li>
+<li>Hamilton 1,519 and Webster 1,042 predicted sessions per port; others 618–894</li>
+<li>Moves ≤ 10 m for bandwidth 250–600 m, 78 m with observed demand</li>
+</ul>
+</div>
+</div>
+<p style="font-size:24px;line-height:1.4">Gap G(x) = demand KDE − supply KDE (h = 400 m, rescaled to equal mass); DBSCAN on cells above its 95th percentile, minPts 4, ε = 57 m.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#6B7385">Patil · Bera · Tyagi — EV charging demand, Palo Alto 2017–2019</p>
+<p style="position:absolute;left:1592px;bottom:64px;width:200px;font-size:24px;color:#6B7385;text-align:right">8</p>
+<aside>Demand surface: Gaussian KDE weighted by M3's predicted 2019 sessions; supply surface: KDE weighted by ports, rescaled to the same total. Red = more predicted demand than the local ports would carry at the city-wide sessions-per-port ratio. 400 m is about a 5-minute walk from a parked car. minPts = 4 = 2 x dimension (Ester et al.); the k-distance knee sits at the 40 m grid spacing, so eps is floored at the grid diagonal (57 m) so 8-connected cells link up. The candidate is the gap-weighted centroid, kept at least 150 m from existing sites; it did not need moving. The 250 m kernel also shows a small zone south-west of Cambridge that disappears at larger bandwidths, so we do not recommend it. Limitation: with only 8 sites, the map measures imbalance between existing sites; it cannot see demand where there is no charger.</aside>
+</section>

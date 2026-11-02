@@ -1,0 +1,10 @@
+step,removed,remaining
+Raw records (Jul 2011 - Dec 2020),0,259415
+Exact duplicate rows,4,259411
+"Excluded stations (SHERMAN, 'BRYANT # 1')",52,259359
+Unparseable start time / UTC-stamped records,31,259328
+Zero / negative plug-in duration,0,259328
+Plug-in duration > 24 h,22,259306
+Energy < 0.1 kWh,1830,257476
+Level-1 (120 V outlet) sessions,4534,252942
+Outside study window (keep 2017-01-01 to 2019-12-31),114606,138336

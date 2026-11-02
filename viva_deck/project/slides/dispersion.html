@@ -1,0 +1,25 @@
+<section id="dispersion" data-transition="fade" style="background:#FBFBF8;color:#3B4660;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1C5CAB">Result 1 · Paper Fig. 3, Table IV</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.15;color:#14213D">Overdispersion lives in daily totals, not hours</h2>
+</div>
+<div style="display:flex;gap:40px;align-items:center">
+<div style="background:#FFFFFF;border:1px solid #DDE3EC;border-radius:16px;padding:12px">
+<img src="/_blob/30864d137fe7c970041901dce3ecac8f" alt="Dispersion diagnostics: hourly cells lie on the variance-equals-mean line, daily cells lie above it and follow the NB2 curve, hourly residual variance over mean falls below one at high means" style="width:1000px;height:343px;object-fit:contain">
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:10px;background:#E6EEF8;border-radius:16px;padding:28px">
+<h3 style="font-size:28px;font-weight:600;line-height:1.2;color:#14213D">Hourly: Poisson is enough</h3>
+<p style="font-size:24px;line-height:1.4">Pearson χ²/df 1.10 · Cameron–Trivedi α = −0.057 (t = −7.6) · NB2 α̂ on the boundary, 95% bound 0.0004</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBE3D7;border-radius:16px;padding:28px">
+<h3 style="font-size:28px;font-weight:600;line-height:1.2;color:#14213D">Daily: NB2 is needed</h3>
+<p style="font-size:24px;line-height:1.4">Pearson 1.36 · α̂ = 0.0168 ± 0.0017, LR = 142 · 90% coverage 87.9% vs 84.3% for Poisson</p>
+</div>
+</div>
+</div>
+<p style="font-size:28px;line-height:1.4;color:#14213D">Why: day-level shocks (weather, events) add up across hours, while busy hours are capped by free ports.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#6B7385">Patil · Bera · Tyagi — EV charging demand, Palo Alto 2017–2019</p>
+<p style="position:absolute;left:1592px;bottom:64px;width:200px;font-size:24px;color:#6B7385;text-align:right">5</p>
+<aside>This was our most surprising finding, and we report it honestly instead of forcing the usual "use NB because of overdispersion" story. Cameron-Trivedi: regress ((y - mu)^2 - y)/mu on mu without intercept; a positive slope means NB2-type overdispersion. Hourly it is negative (slight underdispersion); in the busiest decile variance/mean falls to 0.89 because arrivals are limited by free ports. So at hourly resolution M3 collapses to M2 (alpha-hat = 0, LR = 0). At daily resolution the variance grows like mu + 0.0168 mu^2, and NB2 gives better-calibrated intervals; its PIT tail share is 14.4% vs 18.6% for Poisson (nominal 10%). Planners think in days, so NB2 is the right model for planning-scale uncertainty.</aside>
+</section>

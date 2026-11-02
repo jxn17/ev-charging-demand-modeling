@@ -1,0 +1,33 @@
+<section id="problem" data-transition="fade" style="background:#FBFBF8;color:#3B4660;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1C5CAB">Motivation</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.15;color:#14213D">The problem and four research gaps</h2>
+</div>
+<div style="display:flex;gap:64px;align-items:start">
+<div style="width:520px;display:flex;flex-direction:column;gap:28px">
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:44px;line-height:1.2;color:#14213D">Chargers are sited reactively, not from measured demand.</p>
+<p style="font-size:28px;line-height:1.45">The result: crowded garages next to idle ones, long waits, and slower EV adoption where demand is highest.</p>
+</div>
+<div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px;background:#FFFFFF;border:1px solid #DDE3EC;border-radius:16px;padding:32px">
+<h3 style="font-size:28px;font-weight:600;line-height:1.2;color:#14213D">1 · Interpretability vs accuracy</h3>
+<p style="font-size:24px;line-height:1.4">Ours: count GLMs read as rate ratios, benchmarked against Poisson gradient boosting.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#FFFFFF;border:1px solid #DDE3EC;border-radius:16px;padding:32px">
+<h3 style="font-size:28px;font-weight:600;line-height:1.2;color:#14213D">2 · Forecasting cut off from siting</h3>
+<p style="font-size:24px;line-height:1.4">Ours: forecasts feed a gap map, DBSCAN and a queueing simulation in one pipeline.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#FFFFFF;border:1px solid #DDE3EC;border-radius:16px;padding:32px">
+<h3 style="font-size:28px;font-weight:600;line-height:1.2;color:#14213D">3 · Counts treated as continuous</h3>
+<p style="font-size:24px;line-height:1.4">Ours: Poisson and NB2 likelihoods with a port-exposure offset, compared with OLS.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#FFFFFF;border:1px solid #DDE3EC;border-radius:16px;padding:32px">
+<h3 style="font-size:28px;font-weight:600;line-height:1.2;color:#14213D">4 · Little density-based clustering</h3>
+<p style="font-size:24px;line-height:1.4">Ours: DBSCAN on high-gap grid cells, with ε read from a k-distance plot.</p>
+</div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#6B7385">Patil · Bera · Tyagi — EV charging demand, Palo Alto 2017–2019</p>
+<p style="position:absolute;left:1592px;bottom:64px;width:200px;font-size:24px;color:#6B7385;text-align:right">2</p>
+<aside>These four gaps come straight from our synopsis. Each card says how the project answers it. Likely question: why classical ML instead of LSTM/Transformers? Answer: planners must be able to justify decisions; a GLM gives a multiplicative effect for every factor, and we show on 2019 data that it is not less accurate than a black-box benchmark (slide 6).</aside>
+</section>

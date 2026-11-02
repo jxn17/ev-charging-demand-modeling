@@ -1,0 +1,41 @@
+<section id="data" data-transition="fade" style="background:#F1EFE9;color:#3B4660;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1C5CAB">Data · Paper Tables I–II</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.15;color:#14213D">City of Palo Alto charging sessions</h2>
+</div>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#FBFBF8;border-radius:16px;padding:32px">
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:72px;font-weight:600;line-height:1.1;color:#14213D">259,415</p>
+<p style="font-size:24px;line-height:1.4">raw sessions, Jul 2011 – Dec 2020</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#FBFBF8;border-radius:16px;padding:32px">
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:72px;font-weight:600;line-height:1.1;color:#14213D">138,336</p>
+<p style="font-size:24px;line-height:1.4">clean sessions in the 2017–2019 study window</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#FBFBF8;border-radius:16px;padding:32px">
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:72px;font-weight:600;line-height:1.1;color:#14213D">52</p>
+<p style="font-size:24px;line-height:1.4">Level-2 ports at 8 sites (mid-2019)</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#FBFBF8;border-radius:16px;padding:32px">
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:72px;font-weight:600;line-height:1.1;color:#14213D">60.7%</p>
+<p style="font-size:24px;line-height:1.4">of 210,240 site-hours have zero arrivals</p>
+</div>
+</div>
+<div style="display:flex;gap:48px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:28px;font-weight:600;line-height:1.2;color:#14213D">Exposure offset</h3>
+<p style="font-size:24px;line-height:1.4">Active ports per site-hour, from each port's first and last session (gaps over 30 days = outage). log(ports) enters the model as an offset.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:28px;font-weight:600;line-height:1.2;color:#14213D">Fee regime</h3>
+<p style="font-size:24px;line-height:1.4">Paid share jumps from 0 to 56% in 2017-Q3 and 100% in 2017-Q4; the regime starts 2017-08-01.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:28px;font-weight:600;line-height:1.2;color:#14213D">Strict temporal split</h3>
+<p style="font-size:24px;line-height:1.4">Train 2017–2018, 2018-Q4 for all tuning, test = all of 2019. COVID year 2020 excluded.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#6B7385">Patil · Bera · Tyagi — EV charging demand, Palo Alto 2017–2019</p>
+<p style="position:absolute;left:1592px;bottom:64px;width:200px;font-size:24px;color:#6B7385;text-align:right">3</p>
+<aside>Cleaning (Table II in the paper): 4 exact duplicates, 52 rows from SHERMAN and a stray 'BRYANT # 1' station, 31 UTC-stamped rows whose end is before their start, 22 sessions longer than 24 h, 1,830 under 0.1 kWh, 4,534 Level-1 outlet sessions. Station Name is the key because addresses are inconsistent ('528 High St', '528 high st', '528 High St.'). 'Plug In Event Id' is not unique, so it is never used. Why an offset: capacity changed (HIGH +4 ports Jan 2017, BRYANT +6 Jul 2017, CAMBRIDGE and TED THOMPSON +12 Mar 2018), so raw counts mix demand with capacity. Sanity check: observed simultaneous occupancy never exceeds the port count.</aside>
+</section>

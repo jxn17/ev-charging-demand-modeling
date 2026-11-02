@@ -1,0 +1,30 @@
+<section id="simulation" data-transition="fade" style="background:#F1EFE9;color:#3B4660;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1C5CAB">Evaluation · Paper Fig. 8, Tables IX–X</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.15;color:#14213D">Four overflow ports cut lost sessions by 88%</h2>
+</div>
+<div style="align-self:center;background:#FFFFFF;border:1px solid #DDE3EC;border-radius:16px;padding:12px">
+<img src="/_blob/2474f11fb4ec875f197ce15290d46ca6" alt="Left: simulated against observed mean occupied ports per hour for all eight sites, lying along the diagonal. Right: share of drivers turned away by site and hour, highest at Hamilton and Webster in the morning" style="width:1080px;height:395px;object-fit:contain">
+</div>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:6px;background:#FBFBF8;border-radius:16px;padding:24px">
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;line-height:1.1;color:#14213D">r ≥ 0.988</p>
+<p style="font-size:24px;line-height:1.4">simulated vs observed hourly occupancy, every site</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px;background:#FBFBF8;border-radius:16px;padding:24px">
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;line-height:1.1;color:#14213D">1,708 → 202</p>
+<p style="font-size:24px;line-height:1.4">turned away per year downtown, +4 overflow ports</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px;background:#FBFBF8;border-radius:16px;padding:24px">
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;line-height:1.1;color:#14213D">94</p>
+<p style="font-size:24px;line-height:1.4">per year with pooling alone: redirect drivers, no new ports</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px;background:#FBFBF8;border-radius:16px;padding:24px">
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;line-height:1.1;color:#14213D">1,036 → 41</p>
+<p style="font-size:24px;line-height:1.4">same +4 ports with forecast arrival rates</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#6B7385">Patil · Bera · Tyagi — EV charging demand, Palo Alto 2017–2019</p>
+<p style="position:absolute;left:1592px;bottom:64px;width:200px;font-size:24px;color:#6B7385;text-align:right">9</p>
+<aside>The figure is Fig. 8 of the paper. Left panel: every dot is one site-hour; points on the diagonal mean the simulator reproduces real occupancy. Right panel: where drivers would be turned away, mostly Hamilton and Webster in the morning. The scenario numbers on the cards are Table X. Each site is an M_t/G/c/c loss system on a typical 2019 weekday: non-homogeneous Poisson arrivals by Lewis-Shedler thinning, plug-in durations resampled from that site's 2019 weekday sessions that started in the same hour, c = active ports, a driver who finds all ports busy leaves. 500 replications, fixed seed, one warm-up day. Validation: with observed arrival rates the simulated occupancy matches the occupancy rebuilt from start + duration (r 0.988-0.999); with M3 rates the shape matches but the level carries the 9.4% forecast shortfall. Erlang-B at the peak arrival hour overstates the simulated blocking at 7 of 8 sites, because occupancy lags arrivals. Overflow = try your own garage, then the new site; pooled = any free port in the cluster. Figures are per year on 251 non-holiday weekdays, and are lower bounds because the log never records drivers who were turned away.</aside>
+</section>

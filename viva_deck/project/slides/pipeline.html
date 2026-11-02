@@ -1,0 +1,20 @@
+<section id="pipeline" data-transition="fade" style="background:#FBFBF8;color:#3B4660;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#1C5CAB">Methodology · Paper Fig. 1</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.15;color:#14213D">One pipeline from forecast to evaluation</h2>
+</div>
+<div style="align-self:center;background:#FFFFFF;border:1px solid #DDE3EC;border-radius:16px;padding:12px">
+<img src="/_blob/bbcc9ea763439e4ff48f3c2bcf139b71" alt="Pipeline: raw log, cleaning and exposure, site-hour panel, count models M0 to M4, KDE gap surface and DBSCAN, candidate sites, loss-system simulation" style="width:1150px;height:420px;object-fit:contain">
+</div>
+<div style="display:flex;gap:16px;justify-content:center">
+<p style="font-size:24px;background:#E6EEF8;color:#14213D;padding:8px 20px;border-radius:999px">M0 Seasonal naive</p>
+<p style="font-size:24px;background:#E6EEF8;color:#14213D;padding:8px 20px;border-radius:999px">M1 OLS</p>
+<p style="font-size:24px;background:#E6EEF8;color:#14213D;padding:8px 20px;border-radius:999px">M2 Poisson GLM</p>
+<p style="font-size:24px;background:#E6EEF8;color:#14213D;padding:8px 20px;border-radius:999px">M3 NB2 GLM</p>
+<p style="font-size:24px;background:#FBE3D7;color:#14213D;padding:8px 20px;border-radius:999px">M4 HGB-Poisson (black box)</p>
+</div>
+<p style="font-size:24px;line-height:1.4;text-align:center">Features: hour, weekday, weekend × hour, month, holiday, fee regime, frozen trend, site, site × hour, site × fee, lags at 24 h and 168 h, trailing 7-day same-hour mean · offset log(active ports) · 210 parameters</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#6B7385">Patil · Bera · Tyagi — EV charging demand, Palo Alto 2017–2019</p>
+<p style="position:absolute;left:1592px;bottom:64px;width:200px;font-size:24px;color:#6B7385;text-align:right">4</p>
+<aside>Model: log mu = log(active ports) + x'beta, so every coefficient is a rate per port. No leakage: every lag looks back at least 24 h, so 2019 forecasts are one-day-ahead. All choices were made on the 2018-Q4 validation quarter: the HGB grid (12 configurations), the trend handling (frozen beat extrapolated and none) and the site interactions (both beat either alone). Site x hour covers 06:00-23:00 only, because some site-hours had zero training arrivals and their MLE would diverge. NB2 alpha is found by maximising the profile likelihood; we wrote a sparse IRLS solver that matches statsmodels to about 1e-9.</aside>
+</section>

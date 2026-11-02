@@ -1,0 +1,14 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Raw data: fetch with the git clone command in README.md
+raw/
+
+# Regenerable intermediates and local logs
+outputs/cache/
+outputs/run_log*.txt
+
+# Office lock files
+~$*
